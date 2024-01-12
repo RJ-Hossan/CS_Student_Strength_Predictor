@@ -52,9 +52,9 @@ problems_solved_grade_options = {
 }
 
 # Load the trained machine learning models
-log_reg_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/logistic_regression_model.pkl')
-rf_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/random_forest_model.pkl')
-gb_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/gradient_boosting_model.pkl')
+log_reg_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/logistic_regression_model.pkl')
+rf_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/random_forest_model.pkl')
+gb_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/gradient_boosting_model.pkl')
 
 # Define a function to preprocess user input and make predictions
 def predict_strength(input_data, model):
