@@ -32,6 +32,6 @@ This web app is designed to support academic institutions and students in making
 
 To use the CSE Student Strength Predictor, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/yourusername/your-repo.git`
+1. Clone the repository: `git clone https://github.com/RJ-Hossan/CS_Student_Strength_Predictor.git`
 2. Install dependencies: `pip install -r requirements.txt`
-3. Run the web app: `python app.py`
+3. Run the web app: At first go to the directory and then follow the command `streamlit run app.py`
