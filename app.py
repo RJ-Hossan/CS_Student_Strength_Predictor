@@ -4,7 +4,7 @@ Created on Fri Jan 12 18:11:34 2024
 
 @author: mdref
 """
-
+import os
 import streamlit as st
 import pandas as pd
 import joblib
@@ -51,10 +51,27 @@ problems_solved_grade_options = {
     4: "1000+ problems solved"
 }
 
+
+# Get the base directory of the project
+base_dir = os.path.dirname(__file__)
+
+
+# Construct the relative paths to the model files
+log_reg_model_path = os.path.join(base_dir, 'models', 'logistic_regression_model.pkl')
+rf_model_path = os.path.join(base_dir, 'models', 'random_forest_model.pkl')
+gb_model_path = os.path.join(base_dir, 'models', 'gradient_boosting_model.pkl')
+
+
 # Load the trained machine learning models
-log_reg_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/logistic_regression_model.pkl')
-rf_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/random_forest_model.pkl')
-gb_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/gradient_boosting_model.pkl')
+log_reg_model = joblib.load(log_reg_model_path)
+rf_model = joblib.load(rf_model_path)
+gb_model = joblib.load(gb_model_path)
+
+
+# Load the trained machine learning models
+# log_reg_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/logistic_regression_model.pkl')
+# rf_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/random_forest_model.pkl')
+# gb_model = joblib.load('C:/Users/mdref/Downloads/TWP_Project/models/gradient_boosting_model.pkl')
 
 # Define a function to preprocess user input and make predictions
 def predict_strength(input_data, model):
